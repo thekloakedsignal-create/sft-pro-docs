@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Part Six · Batch Registry · SFT Studio Pro User Manual</title>
+  <title>Part Six · Dataset Registry and Compile &amp; Export · SFT Studio Pro User Manual</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
@@ -18,20 +18,76 @@
     </div>
 
     <header class="doc-head">
-      <h1>Part Six · Batch Registry</h1>
+      <h1>Part Six · Dataset Registry and Compile &amp; Export</h1>
     </header>
 
     <article class="doc">
 
-      <p>The Batch Registry collects approved batches and provides the organized set of data assembled for the project. Its workflow is substantially unchanged, but the available templates have expanded.</p>
+      <p>The Dataset Registry is where the user selects which QA-checked batches will make up the final dataset. It is not simply a list of every batch in the project: the user chooses which approved batches to include in the dataset that will be compiled and exported.</p>
 
-      <ul>
-        <li>Use the expanded templates available in the current application.</li>
-        <li>Only approved batches are added to the registry.</li>
-        <li>The example type, Instruction or Chat/Multi-Turn, is selected during Project Definition, not in the Batch Registry.</li>
-      </ul>
+      <section class="doc__section" id="select-batches-for-the-final-dataset">
+        <h2>Select batches for the final dataset</h2>
+        <p>Each registry entry represents a batch and displays identifying information so the user can recognize what is being included. Depending on the batch, the entry can show its name, batch ID, source, template, number of examples, and QA-checked status. A selection control lets the user include or leave out each batch.</p>
+        <ul>
+          <li>Review the batch name and source to identify the content, such as Document Conversion.</li>
+          <li>Check the template shown for the batch, such as an Instruction Template.</li>
+          <li>Review the example count and confirm that the batch is marked QA Checked.</li>
+          <li>Select the batches you want in the final dataset. Only the selected batches are included in the compile-and-export operation.</li>
+        </ul>
+      </section>
 
-      <p>The approved batches in the registry form the collection of data available for the training corpus.</p>
+      <section class="doc__section" id="review-the-selected-dataset-breakdown">
+        <h2>Review the selected dataset breakdown</h2>
+        <p>The Selected Dataset Breakdown summarizes the current selection before export. It reports how many batches are included and the total number of selected SFT examples. It also shows the automatic partition into training and validation sets.</p>
+        <p>The application partitions approximately 10% of the selected examples for validation and assigns the remainder to the training set. For example, a selection of 115 examples may be divided into 103 training examples and 12 validation examples. The displayed counts are the actual counts for that selection.</p>
+      </section>
+
+      <section class="doc__section" id="choose-the-target-export-template">
+        <h2>Choose the target export template</h2>
+        <p>Target Export Template Format controls the format applied to the selected dataset for export. Choose the template that matches the format you intend to use. The interface displays the selected format and a description of its structure. For example, a ChatML instruction format uses role markers such as &lt;|im_start|&gt; and &lt;|im_end|&gt; to mark message boundaries.</p>
+        <p>After choosing the desired template, use the format action to apply that format to the selected batches. The Apply to Batches action applies the selected export template to the batch data. The interface's formatted output preview then shows how the data is represented in the selected format.</p>
+      </section>
+
+      <section class="doc__section" id="inspect-the-formatted-output-preview">
+        <h2>Inspect the formatted output preview</h2>
+        <p>The Formatted Dataset Output Preview lets the user inspect the converted structure before exporting. It identifies the active format and provides a preview of the output data. The preview can show both a JSONL representation, where each record occupies a single line, and a pretty-printed JSON representation, where the same structure is displayed across multiple lines for easier reading.</p>
+        <ul>
+          <li>Use the preview to confirm that the selected template has been applied and that the output structure looks as intended.</li>
+          <li>Use the copy control to copy the JSON preview when needed.</li>
+          <li>The preview is a representation of the formatted dataset; the export controls below produce the actual training and validation files.</li>
+        </ul>
+      </section>
+
+      <section class="doc__section" id="compile-the-dataset-and-export-both-subsets">
+        <h2>Compile the dataset and export both subsets</h2>
+        <p>Compile &amp; Export gathers the selected batches, applies the selected export format, and prepares separate files for training and validation. The application partitions approximately 10% of the selected examples into the validation subset and uses the remaining examples for the training subset.</p>
+      </section>
+
+      <section class="doc__section" id="training-set-exports">
+        <h2>Training-set exports</h2>
+        <p>The training section provides controls to export the training set as JSON or JSONL and to copy the training JSONL content to the clipboard. JSON is a structured document containing the records; JSONL stores one JSON record per line.</p>
+      </section>
+
+      <section class="doc__section" id="validation-set-exports">
+        <h2>Validation-set exports</h2>
+        <p>The validation section provides corresponding controls to export the validation subset as JSON or JSONL and to copy the validation JSONL content to the clipboard. Keep the training and validation files distinct because they represent separate subsets of the compiled dataset.</p>
+      </section>
+
+      <section class="doc__section" id="compile-and-export-sequence">
+        <h2>Compile &amp; Export sequence</h2>
+        <ol>
+          <li>In the Dataset Registry, select the QA-checked batches to include in the final dataset.</li>
+          <li>Review the selected batch count and total selected SFT examples.</li>
+          <li>Review the automatically partitioned training and validation counts.</li>
+          <li>Choose the Target Export Template Format.</li>
+          <li>Apply the selected export format to the batches.</li>
+          <li>Inspect the Formatted Dataset Output Preview.</li>
+          <li>Export or copy the training set and validation set in the required JSON or JSONL form.</li>
+        </ol>
+      </section>
+
+      <p>Compile &amp; Export prepares the dataset files for the next stage. It is distinct from Automated Training: this stage selects, formats, partitions, and exports the data; Auto&hellip;</p>
+      <!-- SOURCE TEXT TRUNCATED: client's paste ends mid-sentence at "; Auto". Awaiting the remainder to append verbatim. -->
 
     </article>
 
