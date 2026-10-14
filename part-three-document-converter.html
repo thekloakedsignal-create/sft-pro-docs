@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Part Three · Convert Documents into SFT Examples · SFT Studio Pro User Manual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+
+    <div class="topline">
+      <span class="topline__brand">TRiAD Ai</span>
+      <a href="index.html">← Table of Contents</a>
+    </div>
+
+    <header class="doc-head">
+      <h1>Part Three · Convert Documents into SFT Examples</h1>
+    </header>
+
+    <article class="doc">
+
+      <p>The Document Converter lets users upload documents and convert their contents into SFT examples. Each conversion starts with a choice among three conversion types: <strong>Knowledge</strong>, <strong>Transcript</strong>, or <strong>Literature</strong>.</p>
+
+      <section class="doc__section" id="knowledge-conversion">
+        <h2>Knowledge conversion</h2>
+        <p>Choose Knowledge to convert document content into knowledge-oriented SFT examples. The UI includes an instructions field where the user can specify what the conversion generator should do with the source material.</p>
+      </section>
+
+      <section class="doc__section" id="transcript-conversion">
+        <h2>Transcript conversion</h2>
+        <p>Choose Transcript when the uploaded document contains a transcript or conversation with speaker turns. The source document must use identifiable role labels so the converter can interpret which role is speaking.</p>
+        <ul>
+          <li>When Transcript is selected, the UI displays a dedicated field for entering the role labels used in the document.</li>
+          <li>Enter the source labels, such as <strong>user</strong> and <strong>assistant</strong>, matching the document.</li>
+          <li>Use the instructions field to provide any additional directions for the conversion generator.</li>
+        </ul>
+        <p>The role-label field is specific to Transcript conversion. It is separate from the conversion-instructions field.</p>
+      </section>
+
+      <section class="doc__section" id="literature-conversion">
+        <h2>Literature conversion</h2>
+        <p>Choose Literature to convert literary material into SFT examples. The instructions field lets the user specify requirements for how the conversion generator should handle the source material.</p>
+      </section>
+
+      <section class="doc__section" id="conversion-instructions">
+        <h2>Conversion instructions</h2>
+        <p>All three conversion types provide a field for specific instructions to the conversion generator. Knowledge, Transcript, and Literature each have this field; Transcript additionally has the role-label field.</p>
+      </section>
+
+      <section class="doc__section" id="document-conversion-sequence">
+        <h2>Document conversion sequence</h2>
+        <ol>
+          <li>Upload the document or documents to be converted.</li>
+          <li>Select Knowledge, Transcript, or Literature.</li>
+          <li>If Transcript is selected, enter the role labels used in the source document.</li>
+          <li>Enter any specific conversion instructions.</li>
+          <li>Run the conversion to create SFT examples.</li>
+          <li>Review the resulting batch in QA before adding it to the Data Registry.</li>
+        </ol>
+      </section>
+
+    </article>
+
+    <nav class="pagenav" aria-label="Section navigation">
+      <span><a href="part-two-batch-synthesizer.html">← Part Two · Batch Synthesizer</a></span>
+      <span class="pagenav__toc"><a href="index.html">Table of Contents</a></span>
+      <span class="pagenav__next"><a href="part-four-ftk-corpus.html">Part Four · Optional FTK Corpus →</a></span>
+    </nav>
+
+    <footer class="colophon">
+      <p>SFT Studio Pro · triadicai.agency · Supervised Fine-Tuning Synthesis Workspace</p>
+    </footer>
+
+  </main>
+</body>
+</html>
