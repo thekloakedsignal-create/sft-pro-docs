@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to SFT Studio Pro · SFT Studio Pro User Manual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+
+    <div class="topline">
+      <span class="topline__brand">TRiAD Ai</span>
+      <a href="index.html">← Table of Contents</a>
+    </div>
+
+    <header class="doc-head">
+      <h1>Welcome to SFT Studio Pro</h1>
+    </header>
+
+    <article class="doc">
+
+      <p>SFT Studio Pro is a workspace for building supervised fine-tuning (SFT) datasets and moving them through a connected workflow: define a project, create or convert examples, review batches, assemble the approved corpus, and optionally train a model.</p>
+
+      <p>This manual follows the order in which the work is completed in the application. It includes SFT background, dataset planning, project definition, AI-guided and non-guided workflows, the Document Converter, the optional FTK TRiAD alignment corpus, QA, the Batch Registry, and Automated Training.</p>
+
+      <section class="doc__section" id="understanding-sft">
+        <h2>Understanding SFT</h2>
+        <p>Supervised fine-tuning is teaching by example. A model is shown examples of inputs and the responses desired for those inputs. Across the training examples, the model learns patterns in format, voice, content, and response style. An SFT example may be an instruction-response item or a multi-turn conversation, depending on the project's selected example type.</p>
+        <p>The completed dataset is a collection of structured examples. SFT Studio Pro organizes these examples in batches so they can be generated or imported, reviewed, and approved before being added to the project corpus.</p>
+      </section>
+
+      <section class="doc__section" id="planning-the-dataset">
+        <h2>Planning the dataset</h2>
+        <p>There is no single correct dataset size for every project. The amount of data depends on the model, the range of tasks, and the intended identity and capabilities.</p>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Project goal</th>
+                <th>Typical range</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Reliable conversational coherence</td>
+                <td>1,000–3,000 examples</td>
+              </tr>
+              <tr>
+                <td>Coherence plus a distinct, stable identity and voice</td>
+                <td>3,000–10,000 examples</td>
+              </tr>
+              <tr>
+                <td>Broad competence across varied tasks and domains</td>
+                <td>10,000+ examples</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>These ranges are planning references rather than mandatory thresholds. Early examples establish basic patterns; additional examples can expand identity, capability, and coverage. Larger models may generalize from fewer examples, while smaller models often benefit from more examples and greater variety.</p>
+      </section>
+
+      <section class="doc__section" id="quality-and-coverage">
+        <h2>Quality and coverage</h2>
+        <p>Quality matters alongside quantity. A dataset should cover the situations the model is expected to encounter, not merely reach a target count. Consider whether examples represent different skills, easy and difficult requests, varied phrasings, multi-turn interactions, ambiguity, and cases where the intended response needs to be especially precise.</p>
+        <p>A small corpus places greater importance on each example. Repeated wording, narrow coverage, or inconsistent formatting can become prominent patterns. Batch-based review helps make these issues visible while the dataset is being assembled.</p>
+      </section>
+
+      <section class="doc__section" id="training-corpus-and-validator">
+        <h2>Training corpus and validator</h2>
+        <p>The training corpus is the collection of approved examples assembled for the project. The validator is supplied alongside the corpus to the Automated Training workflow. The final training stage uses these inputs with a selected base model.</p>
+      </section>
+
+    </article>
+
+    <nav class="pagenav" aria-label="Section navigation">
+      <span class="pagenav__spacer">← Previous</span>
+      <span class="pagenav__toc"><a href="index.html">Table of Contents</a></span>
+      <span class="pagenav__next"><a href="part-one-define-the-project.html">Part One · Define the Project →</a></span>
+    </nav>
+
+    <footer class="colophon">
+      <p>SFT Studio Pro · triadicai.agency · Supervised Fine-Tuning Synthesis Workspace</p>
+    </footer>
+
+  </main>
+</body>
+</html>
