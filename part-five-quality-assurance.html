@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Part Five · Quality Assurance · SFT Studio Pro User Manual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+
+    <div class="topline">
+      <span class="topline__brand">TRiAD Ai</span>
+      <a href="index.html">← Table of Contents</a>
+    </div>
+
+    <header class="doc-head">
+      <h1>Part Five · Quality Assurance</h1>
+    </header>
+
+    <article class="doc">
+
+      <p>Each batch must be analyzed in QA before it can be added to the Data Registry. QA is not a guided question-and-answer workflow. It analyzes the batch, flags potentially problematic examples, and provides a clear written explanation for each flag.</p>
+
+      <section class="doc__section" id="analyze-a-batch">
+        <h2>Analyze a batch</h2>
+        <ol>
+          <li>Run QA on the batch.</li>
+          <li>Review each flagged example and its written explanation.</li>
+          <li>Choose whether to regenerate flagged examples, remove them through Deduplicate, or leave the flags as they are.</li>
+          <li>Approve or reject the batch.</li>
+        </ol>
+      </section>
+
+      <section class="doc__section" id="regenerate-flagged">
+        <h2>Regenerate Flagged</h2>
+        <p>Click <strong>Regenerate Flagged</strong> to automatically regenerate flagged examples. The regenerated examples are analyzed again.</p>
+        <p>Some examples may remain flagged or return to the flagged group if regeneration has not adequately addressed the issue. The user can click Regenerate Flagged repeatedly to continue the process, including until the score reaches 100% if desired.</p>
+      </section>
+
+      <section class="doc__section" id="deduplicate">
+        <h2>Deduplicate</h2>
+        <p>Click <strong>Deduplicate</strong> to instantly delete all flagged examples from the batch. Regenerate Flagged attempts to regenerate the examples; Deduplicate deletes the flagged examples.</p>
+      </section>
+
+      <section class="doc__section" id="approve-or-reject">
+        <h2>Approve or reject</h2>
+        <p>After QA analysis, the user must approve or reject the batch. Approved batches are added to the Data Registry.</p>
+        <p><strong>The user may ignore any flags and approve the batch. A flag may not align with the user's intention for an example, so the user retains the final say on quality. The user may approve a batch with flags remaining and does not have to reach a 100% score first.</strong></p>
+      </section>
+
+    </article>
+
+    <nav class="pagenav" aria-label="Section navigation">
+      <span><a href="part-four-ftk-corpus.html">← Part Four · FTK Corpus</a></span>
+      <span class="pagenav__toc"><a href="index.html">Table of Contents</a></span>
+      <span class="pagenav__next"><a href="part-six-batch-registry.html">Part Six · Batch Registry →</a></span>
+    </nav>
+
+    <footer class="colophon">
+      <p>SFT Studio Pro · triadicai.agency · Supervised Fine-Tuning Synthesis Workspace</p>
+    </footer>
+
+  </main>
+</body>
+</html>
