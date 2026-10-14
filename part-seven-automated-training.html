@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Part Seven · Automated Training · SFT Studio Pro User Manual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+
+    <div class="topline">
+      <span class="topline__brand">TRiAD Ai</span>
+      <a href="index.html">← Table of Contents</a>
+    </div>
+
+    <header class="doc-head">
+      <h1>Part Seven · Automated Training</h1>
+    </header>
+
+    <article class="doc">
+
+      <p>Automated Training follows the Batch Registry. It takes the project's training corpus and validator and runs them through the training pipeline.</p>
+
+      <section class="doc__section" id="choose-a-base-model">
+        <h2>Choose a base model</h2>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Base model</th>
+                <th>Recommended use</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Qwen 3.5 9B Base</td>
+                <td>Recommended overall.</td>
+              </tr>
+              <tr>
+                <td>Qwen 3.5 4B</td>
+                <td>Recommended for low-compute local deployment.</td>
+              </tr>
+              <tr>
+                <td>Llama 3.1 70B</td>
+                <td>Recommended for hosted deployment and more complex enterprise purposes.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Choose the base model that fits the intended deployment and start the automated workflow. The system automates the training pipeline using the training corpus and validator. When training finishes, the workflow provides a link to the resulting model on Hugging Face.</p>
+      </section>
+
+    </article>
+
+    <nav class="pagenav" aria-label="Section navigation">
+      <span><a href="part-six-batch-registry.html">← Part Six · Batch Registry</a></span>
+      <span class="pagenav__toc"><a href="index.html">Table of Contents</a></span>
+      <span class="pagenav__next"><a href="part-eight-model-access.html">Part Eight · Model Access →</a></span>
+    </nav>
+
+    <footer class="colophon">
+      <p>SFT Studio Pro · triadicai.agency · Supervised Fine-Tuning Synthesis Workspace</p>
+    </footer>
+
+  </main>
+</body>
+</html>
