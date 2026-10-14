@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Part Nine · Craft Notes and Common Pitfalls · SFT Studio Pro User Manual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+
+    <div class="topline">
+      <span class="topline__brand">TRiAD Ai</span>
+      <a href="index.html">← Table of Contents</a>
+    </div>
+
+    <header class="doc-head">
+      <h1>Part Nine · Craft Notes and Common Pitfalls</h1>
+    </header>
+
+    <article class="doc">
+
+      <section class="doc__section" id="repetition">
+        <h2>Repetition</h2>
+        <p>When the same phrase appears across many examples, the trained model may repeat it even when it does not fit the situation. Review repeated introductions, stock endings, and overly similar examples during QA.</p>
+      </section>
+
+      <section class="doc__section" id="overfitting-and-narrow-coverage">
+        <h2>Overfitting and narrow coverage</h2>
+        <p>A small or narrow dataset can encourage memorization rather than broader pattern learning. Variety across skills, phrasings, and situations gives the dataset more coverage. The training workflow includes a validator alongside the corpus.</p>
+      </section>
+
+      <section class="doc__section" id="skipping-review">
+        <h2>Skipping review</h2>
+        <p>QA is part of the workflow before registry entry. Review the explanations attached to flags and choose the appropriate action for each batch. The user has the final say: flags can be regenerated, removed through Deduplicate, or left in place when the user decides the batch should be approved.</p>
+      </section>
+
+      <section class="doc__section" id="changing-the-project-definition">
+        <h2>Changing the project definition</h2>
+        <p>The project definition cannot be unlocked once locked. If a different definition is required, start a new project.</p>
+      </section>
+
+    </article>
+
+    <nav class="pagenav" aria-label="Section navigation">
+      <span><a href="part-eight-model-access.html">← Part Eight · Model Access</a></span>
+      <span class="pagenav__toc"><a href="index.html">Table of Contents</a></span>
+      <span class="pagenav__next"><a href="quick-reference.html">Quick Reference →</a></span>
+    </nav>
+
+    <footer class="colophon">
+      <p>SFT Studio Pro · triadicai.agency · Supervised Fine-Tuning Synthesis Workspace</p>
+    </footer>
+
+  </main>
+</body>
+</html>
